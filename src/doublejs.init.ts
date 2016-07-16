@@ -631,7 +631,7 @@ let dj = (function ($:JQueryStatic) {
                 } else if (typeof baseClass === 'string') {
                     baseClass = _instance.getClasses().get(baseClass);
                 }
-                if (typeof baseClass !== 'function' && _instance.getType(baseClass) !== 'class') {
+                if (typeof baseClass !== 'function' || _instance.getType(baseClass) !== 'class') {
                     _instance.debug('The base class is invalid.');
                     return false;
                 }
