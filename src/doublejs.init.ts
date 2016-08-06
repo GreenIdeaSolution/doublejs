@@ -402,7 +402,7 @@ let dj = (function ($:JQueryStatic) {
             if (typeof invoker === 'function' && invoker !== this.invoked) {
                 let newArgs:any[] = Array.prototype.slice.call(arguments, 2);
                 if (isScopeChange) {
-                    _self.debug('...Scope was changed at [' + fromObj.toString() + '.' + name + ']...');
+                    _self.debug('...Scope was changed at [' + fromObj.toString() + '.' + caller + ']...');
                     return invoker.apply(fromObj, newArgs);
                 }
                 return invoker();
